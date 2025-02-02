@@ -1,0 +1,113 @@
+// style.scss
+
+$primary-color: #4CAF50;
+$secondary-color: #2196F3;
+$danger-color: #f44336;
+$text-color: #333;
+$background-color: #f9f9f9;
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: $background-color;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+// Tiêu đề
+h2 {
+  text-align: center;
+  color: $primary-color;
+  margin-bottom: 20px;
+}
+
+// Form nhập sinh viên
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  input {
+    flex: 1;
+    min-width: 150px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0px 0px 5px rgba($primary-color, 0.5);
+    }
+  }
+
+  button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+    white-space: nowrap;
+
+    &.add {
+      background-color: $primary-color;
+      color: white;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+
+    &.update {
+      background-color: $secondary-color;
+      color: white;
+
+      &:hover {
+        background-color: darken($secondary-color, 10%);
+      }
+    }
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+
+  th, td {
+    padding: 1rem 2rem; // Tăng padding để mỗi cột cách nhau 2rem
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #4CAF50;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  tbody tr {
+    transition: background 0.3s;
+
+    &:hover {
+      background: lighten(#4CAF50, 40%);
+    }
+  }
+}
